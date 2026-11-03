@@ -17,6 +17,17 @@ npm run dev        # starts Vite; it calls sbt to compile Scala.js automatically
 
 Open http://localhost:5173. For faster reloads, keep `sbt ~fastLinkJS` running in a second terminal.
 
+## Tests
+
+```sh
+npm install        # once – provides jsdom for the test environment
+sbt test           # or: npm test
+```
+
+`src/test/scala/example/ShoppingListSpec.scala` mounts `ShoppingList` into a
+jsdom document and drives it through real DOM events (typing, submitting,
+clicking remove), then checks the rendered output.
+
 ## Production build
 
 ```sh
@@ -34,4 +45,4 @@ npm run preview
 
 ## Versions
 
-Scala 3.3.6 (LTS) · Scala.js 1.19.0 · Laminar 17.2.1 · sbt 1.10.11 · Vite 7
+Scala 3.3.6 (LTS) · Scala.js 1.19.0 · Laminar 17.2.1 · munit 1.1.1 · sbt 1.10.11 · Vite 7
