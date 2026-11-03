@@ -27,7 +27,8 @@ npm run preview
 ## Layout
 
 - `build.sbt`, `project/` – sbt build with the Scala.js plugin (ES module output)
-- `src/main/scala/example/Main.scala` – the Laminar app (shopping list)
+- `src/main/scala/example/Main.scala` – entry point and root `App` component
+- `src/main/scala/example/ShoppingList.scala` – the shopping list component and `Item` model
 - `index.html`, `main.js`, `style.css` – Vite entry point
 - `vite.config.js` – wires Scala.js output into Vite via `@scala-js/vite-plugin-scalajs`
 
